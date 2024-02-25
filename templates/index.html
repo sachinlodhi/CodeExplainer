@@ -5,17 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
     <title>Flask Form Example</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
 </head>
 <body>
     <h2>Don't understand some code? Get it explained here.</h2>
+    <div id="formy">
     <form action="/submit" method="post">
         <label for="inputText">Paste Code:</label><br>
         <textarea type="inputText" id="inputText" name="inputText" rows="4" cols="50"></textarea><br>
-        <input id="submitBtn" type="submit" value="Submit">
+        <input id="submitBtn" onclick="$('#loading').show();$('#formy').hide()" type="submit" value="Submit">
+        <br>
+        <img src="/static/cat.png"/>
     </form>
-
-    <body>
-        <!-- Compressing bars component -->
+    
+</div>
+    <div id="loading" style="display:none;">
         <div class="bars-common bar-one"></div>
         <div class="bars-common bar-two"></div>
         <div class="bars-common bar-three"></div>
@@ -23,25 +28,27 @@
         <!-- Rotating squares component -->
         <div class="squares-common square-one"></div>
         <div class="squares-common square-two"></div>
-    </body>
 
-    <div class="drop">
-    <div class="outer">
-        <button class="box">
-            Click me<br>while you wait
-        </button>
+        <div class="drop">
+            <div class="outer">
+                <button class="box">
+                    Click me<br>while you wait
+                </button>
+            </div>
+            </div>
+        
+        <div>SORRYf roe the waigt//?? not raealyy</div>
     </div>
-    </div>
+
     
-    
-    <div>SORRYf roe the waigt//?? not raealyy</div>
+
     </div>
             
     
 </body>
 
 <style>
-    
+
 </style>
 
 <script>
