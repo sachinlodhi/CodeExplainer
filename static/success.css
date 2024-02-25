@@ -1,0 +1,19 @@
+.output-box {
+    width: 300px;
+    padding: 20px;
+    margin: 50px auto;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.output-box h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.output-box p {
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.6;
+}

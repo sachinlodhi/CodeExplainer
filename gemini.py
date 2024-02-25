@@ -41,6 +41,6 @@ def explain(query):
     text2speech.generate_speech(script=script.text)
 
 
-
+    clean_resp = response.text.replace("`","")
     # print(chat.history)
-    return response.text
+    return clean_resp + "\n" + script.text

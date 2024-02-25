@@ -7,9 +7,7 @@ import time
 import sys
 
 app = Flask(__name__)
-
     
-# lient = OpenAI(api_key="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") # setting locally
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -30,8 +28,8 @@ def submit():
     input_text = request.form.get('inputText')
     if (input_text != ""):
         explanation = gemini.explain(input_text)
-        return f'Explanation: {explanation}'
-        #return render_template('success.html', passed_data = explanation)
+        #return f'Explanation: {explanation}'
+        return render_template('success.html', passed_data = explanation)
 
     # completion = openai.ChatCompletion.create(
     #     model="gpt-3.5-turbo",

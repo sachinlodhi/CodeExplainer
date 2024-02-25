@@ -1,6 +1,24 @@
+<!DOCTYPE html>
 <html>
-<head> Great Success! </head>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='success.css') }}">
+</head>
 <body>
-    This is the success page and your data is: {{passed_data}}
+    <div class="output-box">
+        <h2>Output</h2>
+        <p>{{ passed_data }}</p>
+    </div>
+
+    <button id="cyber-btn">Click me!</button>
+
+    <audio id="audioPlayer" src="{{ url_for('static', filename='script.wav') }}" controls></audio>
+    <button onclick="playAudio()">Play Audio</button>
+
+    <script>
+        function playAudio() {
+            var audio = document.getElementById('audioPlayer');
+            audio.play();
+        }
+    </script>
 </body>
 </html>
