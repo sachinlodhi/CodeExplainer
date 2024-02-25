@@ -7,19 +7,7 @@ import time
 import sys
 
 app = Flask(__name__)
-
-def convert(input):
-    # Converts unicode to string
-    if isinstance(input, dict):
-        return {convert(key): convert(value) for key, value in input.iteritems()}
-    elif isinstance(input, list):
-        return [convert(element) for element in input]
-    elif isinstance(input, unicode):
-        return input.encode('utf-8')
-    else:
-        return input
     
-# lient = OpenAI(api_key="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") # setting locally
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -40,8 +28,8 @@ def submit():
     input_text = request.form.get('inputText')
     if (input_text != ""):
         explanation = gemini.explain(input_text)
-        return f'Explanation: {explanation}'
-        #return render_template('success.html', passed_data = explanation)
+        #return f'Explanation: {explanation}'
+        return render_template('success.html', passed_data = explanation)
 
     # completion = openai.ChatCompletion.create(
     #     model="gpt-3.5-turbo",

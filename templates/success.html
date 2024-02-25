@@ -1,6 +1,21 @@
+<!DOCTYPE html>
 <html>
-<head> Great Success! </head>
-<body>
-    This is the success page and your data is: {{passed_data}}
-</body>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='success.css') }}">
+    </head>
+    <body>
+        <button id="cyber-btn">Click me!</button>
+    </body>
+    {{passed_data}}
+    <script>
+        const audio = new Audio("/static/Voice_088.m4a");
+        const buttons = document.querySelectorAll("button");
+
+        buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            audio.play();
+        });
+        });
+    </script>
+
 </html>
