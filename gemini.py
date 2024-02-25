@@ -27,7 +27,7 @@ model = genai.GenerativeModel('gemini-pro')
 chat = model.start_chat(history=[])
 
 def explain(query):
-    formatted_q = 'I would like you to format this output in pure html assuning it will be pasted into html with linebreaks indicated by <br>: put the comments for the lines in a manner that this \
+    formatted_q = 'Format the output for the following question in assuming it will be embedded into html with linebreaks indicated by <br>: put the comments for the lines in a manner that this \
     code is understandable to all people and then in the end put a docstring to tell what does this code do in its entirety. \
     Also reformat the code to make it prettify.' +  query
 

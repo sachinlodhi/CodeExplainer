@@ -1,23 +1,25 @@
-* {
-    margin: 0;
-    padding: 0;
-    border: none;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
-    }
+html,
+body {
+  color:yellow;
+  align-content: center;
+  text-align: center;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #0d1019;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #0d1019 0%, #161b29 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #0d1019 0%, #161b29 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #0d1019 0%, #161b29 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#0d1019', endColorstr='#161b29', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
     
-    html,
-    body {
-    height: 100%;
-    }
-    
-    body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #dff0f6;
-    }
-    
+   
     button {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.5rem;

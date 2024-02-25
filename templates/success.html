@@ -3,9 +3,15 @@
     <head>
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='success.css') }}">
     </head>
-    <body>
+    <!-- <body>
         <button id="cyber-btn">Click me!</button>
-    </body>
+    </body> -->
+    <audio controls autoplay muted>
+        <source src="/static/Voice_088.m4a" type="audio/ogg">
+        <source src="/static/Voice_088.m4a" type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio>
+    <br>
     {{passed_data}}
     <script>
         const audio = new Audio("/static/Voice_088.m4a");
