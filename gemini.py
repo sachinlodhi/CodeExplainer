@@ -1,8 +1,6 @@
 import pathlib
 import textwrap
-
 import google.generativeai as genai
-
 from IPython.display import display
 from IPython.display import Markdown
 
@@ -28,26 +26,18 @@ models/gemini-pro-vision'''
 model = genai.GenerativeModel('gemini-pro')
 chat = model.start_chat(history=[])
 
+def explain(query):
+    formatted_q = 'I would like you to format this output in pure html assuning it will be pasted into html with linebreaks indicated by <br>: put the comments for the lines in a manner that this \
+    code is understandable to all people and then in the end put a docstring to tell what does this code do in its entirety. \
+    Also reformat the code to make it prettify.' +  query
 
-query = '''
-put the comments for the lines in a manner that this code is understandable to all people and then in the end put a docstring to tell what does this code do in its entirety.
+    response = chat.send_message(formatted_q)
 
-def bubble_sort(arr):
-    n = len(arr)
-    for i in range(n):
-        for j in range(0, n-i-1):
-            if arr[j] > arr[j+1]:
-                arr[j], arr[j+1] = arr[j+1], arr[j]
-
-# Example usage:
-arr = [64, 34, 25, 12, 22, 11, 90]
-bubble_sort(arr)
-print("Sorted array is:", arr)
-'''
-
-response = chat.send_message(query)
-print(response.text)
+    script = chat.send_message("Give me script to explain the code and the concepts. Make it sound natural.")
+    print(response.text)
+    print(script.text)
 
 
 
-print(chat.history)
+    # print(chat.history)
+    return response.text

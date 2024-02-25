@@ -1,0 +1,362 @@
+html,
+body {
+  color:yellow;
+  align-content: center;
+  text-align: center;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #0d1019;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #0d1019 0%, #161b29 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #0d1019 0%, #161b29 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #0d1019 0%, #161b29 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#0d1019', endColorstr='#161b29', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+.container {
+  width: 20vw;
+  height: 20vw;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Compressing bars style */
+
+.bars-common {
+  height: 4vw;
+  max-height: 100%;
+  width: 1vw;
+  margin: auto;
+  position: absolute;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.bar-one {
+  left: 0;
+  right: 4vw;
+  top: 0;
+  bottom: 0;
+  box-shadow: 0 0 0 .1vw cyan, 0 0 1vw 0 cyan, inset 0 0 .5vw 0 cyan;
+}
+
+.bar-two {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  box-shadow: 0 0 0 .1vw cyan, 0 0 1vw 0 cyan, inset 0 0 .5vw 0 cyan;
+}
+
+.bar-three {
+  left: 4vw;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  box-shadow: 0 0 0 .1vw cyan, 0 0 1vw 0 cyan, inset 0 0 .5vw 0 cyan;
+}
+
+/* Rotating squares style */
+
+.squares-common {
+  height: 8vw;
+  max-height: 100%;
+  width: 8vw;
+  margin: auto;
+  position: absolute;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0%;
+}
+
+.square-one {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  box-shadow: 0 0 0 .1vw cyan, 0 0 1vw 0 cyan, inset 0 0 .5vw 0 cyan;
+}
+
+.square-two {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  box-shadow: 0 0 0 .1vw cyan, 0 0 1vw 0 cyan, inset 0 0 .5vw 0 cyan;
+}
+
+/* Animation */
+/* Compressing bars animation */
+
+.bar-one {
+  animation: barOne 1s .33s ease infinite;
+  -moz-animation: barOne 1s .33s ease infinite;
+  /* Firefox */
+  -webkit-animation: barOne 1s .33s ease infinite;
+  /* Safari and Chrome */
+  -o-animation: barOne 1s .33s ease infinite;
+  /* Opera */
+}
+
+@keyframes barOne {
+  0%,
+  100% {
+    box-shadow: 0 0 0 .1vw cyan, 0 0 1vw 0 cyan, inset 0 0 .5vw 0 cyan;
+  }
+  50% {
+    height: 2.5vw;
+    box-shadow: 0 0 0 .1vw magenta, 0 0 1vw 0 magenta, inset 0 0 .5vw 0 magenta;
+  }
+}
+
+.bar-two {
+  animation: barTwo 1s .66s ease infinite;
+  -moz-animation: barTwo 1s .66s ease infinite;
+  /* Firefox */
+  -webkit-animation: barTwo 1s .66s ease infinite;
+  /* Safari and Chrome */
+  -o-animation: barTwo 1s .66s ease infinite;
+  /* Opera */
+}
+
+@keyframes barTwo {
+  0%,
+  100% {
+    box-shadow: 0 0 0 .1vw cyan, 0 0 1vw 0 cyan, inset 0 0 .5vw 0 cyan;
+  }
+  50% {
+    height: 2.5vw;
+    box-shadow: 0 0 0 .1vw magenta, 0 0 1vw 0 magenta, inset 0 0 .5vw 0 magenta;
+  }
+}
+
+.bar-three {
+  animation: barThree 1s .99s ease infinite;
+  -moz-animation: barThree 1s .99s ease infinite;
+  /* Firefox */
+  -webkit-animation: barThree 1s .99s ease infinite;
+  /* Safari and Chrome */
+  -o-animation: barThree 1s .99s ease infinite;
+  /* Opera */
+}
+
+@keyframes barThree {
+  0%,
+  100% {
+    box-shadow: 0 0 0 .1vw cyan, 0 0 1vw 0 cyan, inset 0 0 .5vw 0 cyan;
+  }
+  50% {
+    height: 2.5vw;
+    box-shadow: 0 0 0 .1vw magenta, 0 0 1vw 0 magenta, inset 0 0 .5vw 0 magenta;
+  }
+}
+
+/* Rotating squares animation */
+
+.square-one {
+  animation: squareOne 4s .99s ease infinite;
+  -moz-animation: squareOne 4s .99s ease infinite;
+  /* Firefox */
+  -webkit-animation: squareOne 4s .99s ease infinite;
+  /* Safari and Chrome */
+  -o-animation: squareOne 4s .99s ease infinite;
+  /* Opera */
+}
+
+@keyframes squareOne {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-180deg);
+  }
+}
+
+.square-two {
+  animation: squareTwo 4s .99s ease infinite;
+  -moz-animation: squareTwo 4s .99s ease infinite;
+  /* Firefox */
+  -webkit-animation: squareTwo 4s .99s ease infinite;
+  /* Safari and Chrome */
+  -o-animation: squareTwo 4s .99s ease infinite;
+  /* Opera */
+}
+
+@keyframes squareTwo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+:root{
+  --animation-time: 9s;
+}
+body {
+  background-color: #111;
+}
+.drop {
+  position: relative;
+  margin: 60px;
+  --units: 1px;
+  --width: 300;
+  --height: 300;
+  --blur: 50;
+  --border-width: 5;
+  --border-radius: 20;
+  --colour1: #ff53bb;
+  --colour2: #00f8d3;
+  --max-dimensions: max(var(--width), var(--height));
+  --width-dif: calc(var(--max-dimensions) - var(--width));
+  --height-dif: calc(var(--max-dimensions) - var(--height));
+  width: calc(var(--width) * var(--units));
+}
+
+.drop:before,
+.drop:after {
+  content: "";
+  position: absolute;
+  width: calc(var(--height) * 0.5 * var(--units));
+  height: calc(var(--width) * 0.5 * var(--units));
+  top: 0;
+  z-index: 1;
+  filter: blur(calc(var(--width) * 0.25 * var(--units)));
+  border-radius: 100%;
+  transform-origin: calc(var(--width) * 0.5 * var(--units))
+      calc(var(--height) * 0.5 * var(--units));
+  pointer-events: none;
+  opacity: 70%;
+}
+
+.drop:before {
+  background-color: var(--colour1);
+  animation: var(--animation-time) linear infinite rot2;
+  animation-play-state: paused; 
+}
+
+.drop:after {
+  background-color: var(--colour2);
+  animation: var(--animation-time) linear infinite rot3;
+  animation-play-state: paused; 
+}
+
+.outer {
+  width: calc(var(--width) * (var(--units)));
+  height: calc(var(--height) * (var(--units)));
+  overflow: hidden;
+  border-radius: calc(var(--border-radius) * var(--units));
+  position: relative;
+}
+
+.box {
+  position: relative;
+  width: calc(calc(var(--width) - (2 * var(--border-width))) * var(--units));
+  height: calc(
+      calc(var(--height) - (2 * var(--border-width))) * var(--units)
+  );
+  margin: calc(var(--border-width) * var(--units));
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  font-size:30px;
+  border-radius: calc(var(--border-radius) * var(--units));
+  background-color: #111;
+  transition: all 0.5s linear;
+  border: 1px solid transparent;
+  color: var(--colour1);
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(
+      #ff53bb 0deg,
+      #0000 30deg,
+      #0000 120deg,
+      #00f8d3 150deg,
+      #00f8d3 180deg,
+      #0000 210deg,
+      #0000 300deg,
+      #ff53bb 330deg
+  );
+  left: calc(
+      calc(var(--max-dimensions) + var(--width-dif)) * -0.5 * var(--units)
+  );
+  top: calc(
+      calc(var(--max-dimensions) + var(--height-dif)) * -0.5 * var(--units)
+  );
+  height: calc(var(--max-dimensions) * 2 * var(--units));
+  width: calc(var(--max-dimensions) * 2 * var(--units));
+  pointer-events: none;
+  animation: var(--animation-time) linear infinite rot;
+  animation-play-state: paused;  
+  border-radius: calc(var(--border-radius) * 1%);
+  z-index: -1;
+}
+
+
+.drop:hover::before,
+.drop:hover::after{
+  animation-play-state: running;  
+}
+
+.drop .box:hover,
+.box:hover::before{
+  background-color: #1b1b1c;
+  border: 1px solid #666;
+  animation-play-state: running;   
+}
+
+@keyframes rot {
+  0% {
+      transform: rotate(0);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+@keyframes rot2 {
+  0% {
+      transform: rotate(20deg);
+  }
+  100% {
+      transform: rotate(380deg);
+  }
+}
+@keyframes rot3 {
+  0% {
+      transform: rotate(-160deg);
+  }
+  100% {
+      transform: rotate(200deg);
+  }
+}
+.drop2 {
+  --border-width: 10;
+  --border-radius: 200;
+  --width: 250;
+  --height: 250;
+}
