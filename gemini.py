@@ -32,7 +32,10 @@ def explain(query):
     Also reformat the code to make it prettify.' +  query
 
     response = chat.send_message(formatted_q)
+
+    script = chat.send_message("Give me script to explain the code and the concepts. Make it sound natural.")
     print(response.text)
+    print(script.text)
 
 
 
