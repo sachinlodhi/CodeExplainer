@@ -28,13 +28,13 @@ model = genai.GenerativeModel('gemini-pro')
 chat = model.start_chat(history=[])
 
 def explain(query):
-    formatted_q = 'I would like you to format this output in pure html assuning it will be pasted into html with linebreaks indicated by <br>: put the comments for the lines in a manner that this \
-    code is understandable to all people and then in the end put a docstring to tell what does this code do in its entirety. \
-    Also reformat the code to make it prettify.' +  query
+    formatted_q = 'Generate commented code with short explanations for each section or line of code based on the provided code snippet. Also reformat the code to make it pretty. The programming language is not specified, and the model should determine it automatically\n Code Snippet:\n' + query
+
+
 
     response = chat.send_message(formatted_q)
 
-    script = chat.send_message("Give me overall explanation. Do not use the special character from the code. Make it sound natural. keep it concise.")
+    script = chat.send_message("Give me overall explanation. Do not use the special character from the code. Make it sound natural. keep it concise. single paragraph like 5 to 8 lines.")
     print(response.text)
     print(script.text)
     # calling the text2speech
