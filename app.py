@@ -12,7 +12,6 @@ def index():
 @app.route('/submit', methods=['POST'])
 def submit():
 
-
     input_text = request.form.get('inputText')
 
     # completion = openai.ChatCompletion.create(

@@ -3,6 +3,7 @@ import textwrap
 import google.generativeai as genai
 from IPython.display import display
 from IPython.display import Markdown
+import text2speech
 
 genai.configure(api_key="AIzaSyCT-vX_Beof6USjD07vScvxk47DM1FaZQw")
 
@@ -33,9 +34,11 @@ def explain(query):
 
     response = chat.send_message(formatted_q)
 
-    script = chat.send_message("Give me script to explain the code and the concepts. Make it sound natural.")
+    script = chat.send_message("Give me overall explanation. Do not use the special character from the code. Make it sound natural. keep it concise.")
     print(response.text)
     print(script.text)
+    # calling the text2speech
+    text2speech.generate_speech(script=script.text)
 
 
 
