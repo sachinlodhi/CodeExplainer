@@ -2,17 +2,28 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='success.css') }}">
+    <style>
+        .container {
+            text-align: center;
+        }
+
+        .audio-controls {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <div class="output-box">
-        <h2>Output</h2>
-        <p>{{ passed_data }}</p>
+    <div class="container">
+        <textarea id="formatted-text" class="text-box neon-text" rows="10" cols="50">
+            {{ passed_data }}
+        </textarea>
+
     </div>
 
-    <button id="cyber-btn">Click me!</button>
-
-    <audio id="audioPlayer" src="{{ url_for('static', filename='script.wav') }}" controls></audio>
-    <button onclick="playAudio()">Play Audio</button>
+    <div class="container audio-controls">
+        <audio id="audioPlayer" src="{{ url_for('static', filename='script.wav') }}" controls></audio>
+        <button onclick="playAudio()" class="neon-text">Play Audio</button>
+    </div>
 
     <script>
         function playAudio() {
@@ -21,4 +32,5 @@
         }
     </script>
 </body>
+
 </html>

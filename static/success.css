@@ -1,19 +1,30 @@
-.output-box {
-    width: 300px;
-    padding: 20px;
-    margin: 50px auto;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+body {
+    background-color: #000;
 }
 
-.output-box h2 {
-    margin-top: 0;
-    color: #333;
+.container {
+    text-align: center;
+    color: #fff;
 }
 
-.output-box p {
-    margin-bottom: 0;
-    font-size: 16px;
-    line-height: 1.6;
+.audio-controls {
+    margin-top: 20px;
+}
+
+.audio-controls button {
+    margin-top: 10px;
+}
+
+.neon-text {
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 55px #ff00ff, 0 0 75px #ff00ff;
+    animation: flicker 1s infinite alternate;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
-    <title>Flask Form Example</title>
+    <title>Code Explainer</title>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 
 </head>
@@ -13,7 +13,7 @@
     <div id="formy">
     <form action="/submit" method="post">
         <label for="inputText">Paste Code:</label><br>
-        <textarea type="inputText" id="inputText" name="inputText" rows="4" cols="50"></textarea><br>
+        <textarea type="inputText" id="inputText" name="inputText" rows="20" cols="75"></textarea><br>
         <input id="submitBtn" onclick="$('#loading').show();$('#formy').hide()" type="submit" value="Submit">
         <br>
         <img src="/static/cat.png"/>
@@ -29,19 +29,11 @@
         <div class="squares-common square-one"></div>
         <div class="squares-common square-two"></div>
 
-        <div class="drop">
-            <div class="outer">
-                <button class="box">
-                    Click me<br>while you wait
-                </button>
-                {{passed_data}}
-            </div>
-            </div>
         
-        <div>Sorry for the wait :3</div>
+        
+        <div>Please wait...</div>
     </div>
 
-    
 
     </div>
             

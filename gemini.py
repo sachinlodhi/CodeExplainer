@@ -43,4 +43,4 @@ def explain(query):
 
     clean_resp = response.text.replace("`","")
     # print(chat.history)
-    return clean_resp + "\n" + script.text
+    return clean_resp
